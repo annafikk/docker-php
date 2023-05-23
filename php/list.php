@@ -10,7 +10,8 @@
     </header>
 
     <nav>
-        <a href="daftar.php">[+] Tambah Baru</a>
+        <a href="daftar.php">[+] Tambah Baru</a><br>
+        <a href="index.php">[<] Kembali</a>
     </nav>
 
     <br>
@@ -24,11 +25,9 @@
             <th>Jenis Kelamin</th>
             <th>Semester</th>
             <th>Prodi</th>
-            <th>Tindakan</th>
-        </tr>
+        </tr> 
     </thead>
     <tbody>
-
         <?php
         $sql = "SELECT * FROM calon";
         $query = mysqli_query($db, $sql);
@@ -55,11 +54,6 @@
     </tbody>
     </table>
 
-    <p>Total : <?php echo mysqli_num_rows($query) ?></p>
-
-    <nav>
-        <a href="index.php">[<] Kembali</a>
-    </nav>
-
+    <p><?php echo mysqli_num_rows($query) ?></p>
     </body>
 </html>
